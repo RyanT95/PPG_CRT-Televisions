@@ -7,7 +7,7 @@ This mod includes two CRT video monitors, the Sony PVM 14M4E and the Sony PVM 20
 * The 14" PVM is around 37.5cm tall in-game, weighing at about 10.0KG (Was 16KG, changed for balance reasons)
 * The 20" PVM is around 49.0cm tall in-game, weighing a substantial 20.0KG (Was 28KG, changed for balance reasons)
 
-This mod originally started as a test, to see how easy it was to create something in the game. I didn't like how little you could do with the ModAPI, so I started looking through the game files to see what other functions could be used, and how the existing objects worked.
+This mod originally started as a test, to see how easy it was to create something in the game. I didn't like how little you could do with the [ModAPI](https://www.studiominus.nl/ppg-modding/api/modApi.html), so I started looking through the game files to see what other functions could be used, and how the existing objects worked.
 
 This mod is not finished, and there are plenty of things I would like to add. But it's tough to find time between work, and other projects.
 
