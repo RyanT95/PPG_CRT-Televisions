@@ -1,0 +1,26 @@
+# Directories
+.vs/
+bin/
+obj/
+Properties/
+
+# Files
+*.user
+*.csproj
+*.user
+*.sln
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
