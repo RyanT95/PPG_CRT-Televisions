@@ -14,24 +14,24 @@ This mod is not finished, and there are plenty of things I would like to add. Bu
 See the [Media](https://github.com/RyanT95/PPG_CRT-Televisions/blob/main/Media) folder to see the mod in action.
 
 ## Features
-Activate the TV to turn it on
-Use the right click context menu to change channels
-Buttons light up when turned on
-Screen is a light source, flickering slightly in the dark
-Short circuits and explodes on contact with water (only when turned on)
-Breaks when dropped from height, or suffers too much damage
-Interacts uniquely with all damage types in-game
-Different sprites and effects when broken by said damage types
-Heavy
+* Activate the TV to turn it on
+* Use the right click context menu to change channels
+* Buttons light up when turned on
+* Screen is a light source, flickering slightly in the dark
+* Short circuits and explodes on contact with water (only when turned on)
+* Breaks when dropped from height, or suffers too much damage
+* Interacts uniquely with all damage types in-game
+* Different sprites and effects when broken by said damage types
+* Heavy
 
 ## Planned Features
-Add sound
-Add effects when TV is turned on and off
-Have it interact with electric wires, and variable power levels (Screen shines brighter with higher voltages etc)
-Damage effects (Screen going off and on when damaged etc)
-Connect multiple TVs with wires to display the same thing
-Add various items that display different things on the screen when connected with a wire (Game consoles etc)
-Working screen that can display text or video
+* Add sound
+* Add effects when TV is turned on and off
+* Have it interact with electric wires, and variable power levels (Screen shines brighter with higher voltages etc)
+* Damage effects (Screen going off and on when damaged etc)
+* Connect multiple TVs with wires to display the same thing
+* Add various items that display different things on the screen when connected with a wire (Game consoles etc)
+* Working screen that can display text or video
 
 ## Built With
 * [Visual Studio Community 2019](https://visualstudio.microsoft.com/vs/) 
