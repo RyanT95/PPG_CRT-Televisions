@@ -1,5 +1,5 @@
 # CRT Televisions (People Playground Mod)
- Mod for the 2D sandbox game "People Playground" that adds CRT TV items with lighting effects and basic user interaction.
+ Mod for the 2D sandbox game [People Playground](https://store.steampowered.com/app/1118200/People_Playground/) that adds CRT TV items with lighting effects and basic user interaction.
 
 ![Logo](https://github.com/RyanT95/PPG_CRT-Televisions/blob/main/Media/icon.png)
 
