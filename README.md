@@ -11,7 +11,7 @@ This mod originally started as a test, to see how easy it was to create somethin
 
 This mod is not finished, and there are plenty of things I would like to add. But it's tough to find time between work, and other projects.
 
-See the [Media](https://github.com/RyanT95/PPG_CRT-Televisions/blob/main/Media) to see the mod in action.
+See the [Media](https://github.com/RyanT95/PPG_CRT-Televisions/blob/main/Media) folder to see the mod in action.
 
 ## Features
 Activate the TV to turn it on
