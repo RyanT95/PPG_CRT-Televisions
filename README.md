@@ -1,6 +1,8 @@
 # CRT Televisions (People Playground Mod)
  Mod for the 2D sandbox game "People Playground" that adds CRT TV items with lighting effects and basic user interaction.
 
+![Logo](https://github.com/RyanT95/PPG_CRT-Televisions/blob/main/Media/icon.png)
+
 This mod includes two CRT video monitors, the Sony PVM 14M4E and the Sony PVM 20M4E. The monitors are fully to scale and accurately weighted, detailed below.
 * The 14" PVM is around 37.5cm tall in-game, weighing at about 10.0KG (Was 16KG, changed for balance reasons)
 * The 20" PVM is around 49.0cm tall in-game, weighing a substantial 20.0KG (Was 28KG, changed for balance reasons)
