@@ -4,8 +4,36 @@ namespace TelevisionPVM
 {
 	public class TelevisionPVM
 	{
+		private static float TvSmallScale = 7.20f;     // PVM14 | ~34.0cm tall irl | ~37.5cm tall ingame
+		private static float TvBigScale = 6.27f;       // PVM20 | ~46.0cm tall irl | ~49.0cm tall ingame
+
 		private static string TvSmallView = "Sprites/PVM14View.png";
 		private static string TvBigView = "Sprites/PVM20View.png";
+
+		private static Sprite GlowSprite = ModAPI.LoadSprite("Sprites/glowSprite.png");
+
+		private static Sprite TvSmallOn =			ModAPI.LoadSprite("Sprites/PVM14/PVM14_ON.png", TvSmallScale, true);
+		private static Sprite TvSmallPal =			ModAPI.LoadSprite("Sprites/PVM14/PVM14_ON-PAL.png", TvSmallScale, true);
+		private static Sprite TvSmallGeometry =		ModAPI.LoadSprite("Sprites/PVM14/PVM14_ON-Geometry.png", TvSmallScale, true);
+		private static Sprite TvSmallColourBars =	ModAPI.LoadSprite("Sprites/PVM14/PVM14_ON-Colour-Bars.png", TvSmallScale, true);
+		private static Sprite TvSmallOff =			ModAPI.LoadSprite("Sprites/PVM14/PVM14_OFF.png", TvSmallScale, true);
+		private static Sprite TvSmallBroken =		ModAPI.LoadSprite("Sprites/PVM14/PVM14_Destroyed.png", TvSmallScale, true);
+		private static Sprite TvSmallShock =		ModAPI.LoadSprite("Sprites/PVM14/PVM14_Destroyed-Shock.png", TvSmallScale, true);
+		private static Sprite TvSmallFire =			ModAPI.LoadSprite("Sprites/PVM14/PVM14_Destroyed-Fire.png", TvSmallScale, true);
+		private static Sprite TvSmallWater =		ModAPI.LoadSprite("Sprites/PVM14/PVM14_Destroyed-Water.png", TvSmallScale, true);
+		private static Sprite TvSmallExplode =		ModAPI.LoadSprite("Sprites/PVM14/PVM14_Destroyed-Explosion.png", TvSmallScale, true);
+
+		private static Sprite TvBigOn =				ModAPI.LoadSprite("Sprites/PVM20/PVM20_ON.png", TvBigScale, true);
+		private static Sprite TvBigPal =			ModAPI.LoadSprite("Sprites/PVM20/PVM20_ON-PAL.png", TvBigScale, true);
+		private static Sprite TvBigGeometry =		ModAPI.LoadSprite("Sprites/PVM20/PVM20_ON-Geometry.png", TvBigScale, true);
+		private static Sprite TvBigColourBars =		ModAPI.LoadSprite("Sprites/PVM20/PVM20_ON-Colour-Bars.png", TvBigScale, true);
+		private static Sprite TvBigOff =			ModAPI.LoadSprite("Sprites/PVM20/PVM20_OFF.png", TvBigScale, true);
+		private static Sprite TvBigBroken =			ModAPI.LoadSprite("Sprites/PVM20/PVM20_Destroyed.png", TvBigScale, true);
+		private static Sprite TvBigShock =			ModAPI.LoadSprite("Sprites/PVM20/PVM20_Destroyed-Shock.png", TvBigScale, true);
+		private static Sprite TvBigFire =			ModAPI.LoadSprite("Sprites/PVM20/PVM20_Destroyed-Fire.png", TvBigScale, true);
+		private static Sprite TvBigWater =			ModAPI.LoadSprite("Sprites/PVM20/PVM20_Destroyed-Water.png", TvBigScale, true);
+		private static Sprite TvBigExplode =		ModAPI.LoadSprite("Sprites/PVM20/PVM20_Destroyed-Explosion.png", TvBigScale, true);
+
 		//private static string RulerView = "Sprites/RulerView.png";
 
 		public static void Main()
@@ -37,12 +65,26 @@ namespace TelevisionPVM
 						var collider = Instance.GetComponent<BoxCollider2D>();
 						var behaviour = Instance.GetOrAddComponent<PhysicalBehaviour>();
 
-						sprite.sprite = ModAPI.LoadSprite(pvm.GetTvSmallOff, pvm.GetTvSmallScale, true);
+						sprite.sprite = TvSmallOff;
+						
+						pvm.SetGlowSprite(GlowSprite);
+
+						pvm.SetTvSmallOnSprite(TvSmallOn);
+						pvm.SetTvSmallPalSprite(TvSmallPal);
+						pvm.SetTvSmallGeometrySprite(TvSmallGeometry);
+						pvm.SetTvSmallColourBarsSprite(TvSmallColourBars);
+						pvm.SetTvSmallOffSprite(TvSmallOff);
+						pvm.SetTvSmallBrokenSprite(TvSmallBroken);
+						pvm.SetTvSmallShockSprite(TvSmallShock);
+						pvm.SetTvSmallFireSprite(TvSmallFire);
+						pvm.SetTvSmallWaterSprite(TvSmallWater);
+						pvm.SetTvSmallExplodeSprite(TvSmallExplode);
 
 						collider.size = sprite.sprite.bounds.size;
 						collider.offset = sprite.sprite.bounds.center;
 
 						behaviour.Properties = ModAPI.FindPhysicalProperties("Flammable metal");
+						behaviour.Properties.HeatTransferSpeedMultiplier = 0;	// Disable glowing red hot when on fire
 						behaviour.TrueInitialMass = pvm.GetTvSmallWeight;
 						behaviour.InitialMass = pvm.GetTvSmallWeight;
 						behaviour.rigidbody.mass = pvm.GetTvSmallWeight;
@@ -77,12 +119,24 @@ namespace TelevisionPVM
 						var collider = Instance.GetComponent<BoxCollider2D>();
 						var behaviour = Instance.GetOrAddComponent<PhysicalBehaviour>();
 
-						sprite.sprite = ModAPI.LoadSprite(pvm.GetTvBigOff, pvm.GetTvBigScale, true);
+						sprite.sprite = TvBigOff;
+
+						pvm.SetTvBigOnSprite(TvBigOn);
+						pvm.SetTvBigPalSprite(TvBigPal);
+						pvm.SetTvBigGeometrySprite(TvBigGeometry);
+						pvm.SetTvBigColourBarsSprite(TvBigColourBars);
+						pvm.SetTvBigOffSprite(TvBigOff);
+						pvm.SetTvBigBrokenSprite(TvBigBroken);
+						pvm.SetTvBigShockSprite(TvBigShock);
+						pvm.SetTvBigFireSprite(TvBigFire);
+						pvm.SetTvBigWaterSprite(TvBigWater);
+						pvm.SetTvBigExplodeSprite(TvBigExplode);
 
 						collider.size = sprite.sprite.bounds.size;
 						collider.offset = sprite.sprite.bounds.center;
 
 						behaviour.Properties = ModAPI.FindPhysicalProperties("Flammable metal");
+						behaviour.Properties.HeatTransferSpeedMultiplier = 0;	// Disable glowing red hot when on fire
 						behaviour.TrueInitialMass = pvm.GetTvBigWeight;
 						behaviour.InitialMass = pvm.GetTvBigWeight;
 						behaviour.rigidbody.mass = pvm.GetTvBigWeight;

@@ -1,5 +1,5 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
+using System;
 
 namespace TelevisionPVM
 {
@@ -13,34 +13,31 @@ namespace TelevisionPVM
 		public readonly string RulerView = "Sprites/RulerView.png";
 		*/
 
-		// Sprite Locations
+		// Sprites
 		// =============================================================================================
-		private readonly string GlowSprite = "Sprites/glowSprite.png";
-		
-		public readonly string TvSmallView = "Sprites/PVM14View.png";
-		public readonly string TvBigView = "Sprites/PVM20View.png";
-			   
-		private readonly string TvSmallOn = "Sprites/PVM14/PVM14_ON.png";
-		private readonly string TvSmallPal = "Sprites/PVM14/PVM14_ON-PAL.png";
-		private readonly string TvSmallGeometry = "Sprites/PVM14/PVM14_ON-Geometry.png";
-		private readonly string TvSmallColourBars = "Sprites/PVM14/PVM14_ON-Colour-Bars.png";
-		private readonly string TvSmallOff = "Sprites/PVM14/PVM14_OFF.png";
-		private readonly string TvSmallBroken = "Sprites/PVM14/PVM14_Destroyed.png";
-		private readonly string TvSmallShock = "Sprites/PVM14/PVM14_Destroyed-Shock.png";
-		private readonly string TvSmallFire = "Sprites/PVM14/PVM14_Destroyed-Fire.png";
-		private readonly string TvSmallWater = "Sprites/PVM14/PVM14_Destroyed-Water.png";
-		private readonly string TvSmallExplode = "Sprites/PVM14/PVM14_Destroyed-Explosion.png";
+		private Sprite GlowSprite;
 
-		private readonly string TvBigOn = "Sprites/PVM20/PVM20_ON.png";
-		private readonly string TvBigPal = "Sprites/PVM20/PVM20_ON-PAL.png";
-		private readonly string TvBigGeometry = "Sprites/PVM20/PVM20_ON-Geometry.png";
-		private readonly string TvBigColourBars = "Sprites/PVM20/PVM20_ON-Colour-Bars.png";
-		private readonly string TvBigOff = "Sprites/PVM20/PVM20_OFF.png";
-		private readonly string TvBigBroken = "Sprites/PVM20/PVM20_Destroyed.png";
-		private readonly string TvBigShock = "Sprites/PVM20/PVM20_Destroyed-Shock.png";
-		private readonly string TvBigFire = "Sprites/PVM20/PVM20_Destroyed-Fire.png";
-		private readonly string TvBigWater = "Sprites/PVM20/PVM20_Destroyed-Water.png";
-		private readonly string TvBigExplode = "Sprites/PVM20/PVM20_Destroyed-Explosion.png";
+		private Sprite TvSmallOn;
+		private Sprite TvSmallPal;
+		private Sprite TvSmallGeometry;
+		private Sprite TvSmallColourBars;
+		private Sprite TvSmallOff;
+		private Sprite TvSmallBroken;
+		private Sprite TvSmallShock;
+		private Sprite TvSmallFire;
+		private Sprite TvSmallWater;
+		private Sprite TvSmallExplode;
+
+		private Sprite TvBigOn;
+		private Sprite TvBigPal;
+		private Sprite TvBigGeometry;
+		private Sprite TvBigColourBars;
+		private Sprite TvBigOff;
+		private Sprite TvBigBroken;
+		private Sprite TvBigShock;
+		private Sprite TvBigFire;
+		private Sprite TvBigWater;
+		private Sprite TvBigExplode;
 
 		// TV Properties
 		// =============================================================================================
@@ -78,13 +75,36 @@ namespace TelevisionPVM
 
 		// Getters
 		// =============================================================================================
-		public string GetTvSmallOff { get { return TvSmallOff; } }
-		public string GetTvBigOff { get { return TvBigOff; } }
+		public float GetTvSmallScale	{ get { return TvSmallScale; } }
+		public float GetTvSmallWeight	{ get { return TvSmallWeight; } }
+		public float GetTvBigScale		{ get { return TvBigScale; } }
+		public float GetTvBigWeight		{ get { return TvBigWeight; } }
 
-		public float GetTvSmallScale { get { return TvSmallScale; } }
-		public float GetTvSmallWeight { get { return TvSmallWeight; } }
-		public float GetTvBigScale { get { return TvBigScale; } }
-		public float GetTvBigWeight { get { return TvBigWeight; } }
+		// Setters
+		// =============================================================================================
+		public void SetGlowSprite(Sprite S)					{ this.GlowSprite = S; }
+
+		public void SetTvSmallOnSprite(Sprite S)			{ this.TvSmallOn = S; }
+		public void SetTvSmallPalSprite(Sprite S)			{ this.TvSmallPal = S; }
+		public void SetTvSmallGeometrySprite(Sprite S)		{ this.TvSmallGeometry = S; }
+		public void SetTvSmallColourBarsSprite(Sprite S)	{ this.TvSmallColourBars = S; }
+		public void SetTvSmallOffSprite(Sprite S)			{ this.TvSmallOff = S; }
+		public void SetTvSmallBrokenSprite(Sprite S)		{ this.TvSmallBroken = S; }
+		public void SetTvSmallShockSprite(Sprite S)			{ this.TvSmallShock = S; }
+		public void SetTvSmallFireSprite(Sprite S)			{ this.TvSmallFire = S; }
+		public void SetTvSmallWaterSprite(Sprite S)			{ this.TvSmallWater = S; }
+		public void SetTvSmallExplodeSprite(Sprite S)		{ this.TvSmallExplode = S; }
+
+		public void SetTvBigOnSprite(Sprite S)				{ this.TvBigOn = S; }
+		public void SetTvBigPalSprite(Sprite S)				{ this.TvBigPal = S; }
+		public void SetTvBigGeometrySprite(Sprite S)		{ this.TvBigGeometry = S; }
+		public void SetTvBigColourBarsSprite(Sprite S)		{ this.TvBigColourBars = S; }
+		public void SetTvBigOffSprite(Sprite S)				{ this.TvBigOff = S; }
+		public void SetTvBigBrokenSprite(Sprite S)			{ this.TvBigBroken = S; }
+		public void SetTvBigShockSprite(Sprite S)			{ this.TvBigShock = S; }
+		public void SetTvBigFireSprite(Sprite S)			{ this.TvBigFire = S; }
+		public void SetTvBigWaterSprite(Sprite S)			{ this.TvBigWater = S; }
+		public void SetTvBigExplodeSprite(Sprite S)			{ this.TvBigExplode = S; }
 
 		// Cached Values
 		// =============================================================================================
@@ -109,6 +129,7 @@ namespace TelevisionPVM
 		private GameObject OnButton;
 		private GameObject RemoteButton;
 
+		private SpriteRenderer TvSprite;
 		//private SpriteRenderer ScreenSprite;
 		private SpriteRenderer OnButtonSprite;
 		private SpriteRenderer RemoteButtonSprite;
@@ -116,12 +137,14 @@ namespace TelevisionPVM
 		private LightSprite ScreenLight;
 		private LightSprite RemoteButtonLight;
 		private LightSprite OnButtonLight;
-
+		
 		// ********************************
 		// Start
 		// ********************************
 		private void Start()
-		{
+		{			
+			TvSprite = gameObject.GetComponent<SpriteRenderer>();
+			
 			InvokeRepeating("Flicker", 0.1f, 0.08f);	// Call the Flicker() function every 0.08 seconds
 		}
 
@@ -142,7 +165,7 @@ namespace TelevisionPVM
 			Screen.transform.localPosition = _tempScreenPosition;
 			Screen.transform.localScale = _tempScreenScale;
 			ScreenSprite = Screen.AddComponent<SpriteRenderer>();
-			ScreenSprite.sprite = ModAPI.LoadSprite(GlowSprite);
+			ScreenSprite.sprite = GlowSprite;
 			ScreenSprite.sharedMaterial = ModAPI.FindMaterial("Sprites-Default");
 			ScreenSprite.color = ScreenColour;
 			ScreenSprite.enabled = false;
@@ -154,7 +177,7 @@ namespace TelevisionPVM
 			OnButton.transform.localPosition = _tempOnButtonPosition;
 			OnButton.transform.localScale = _tempButtonScale;
 			OnButtonSprite = OnButton.AddComponent<SpriteRenderer>();
-			OnButtonSprite.sprite = ModAPI.LoadSprite(GlowSprite);
+			OnButtonSprite.sprite = GlowSprite;
 			OnButtonSprite.sharedMaterial = ModAPI.FindMaterial("VeryBright");
 			OnButtonSprite.color = OnButtonColour;
 			OnButtonSprite.enabled = false;
@@ -165,7 +188,7 @@ namespace TelevisionPVM
 			RemoteButton.transform.localPosition = _tempRemoteButtonPosition;
 			RemoteButton.transform.localScale = _tempButtonScale;
 			RemoteButtonSprite = RemoteButton.AddComponent<SpriteRenderer>();
-			RemoteButtonSprite.sprite = ModAPI.LoadSprite(GlowSprite);
+			RemoteButtonSprite.sprite = GlowSprite;
 			RemoteButtonSprite.sharedMaterial = ModAPI.FindMaterial("VeryBright");
 			RemoteButtonSprite.color = RemoteButtonColour;
 			RemoteButtonSprite.enabled = false;
@@ -461,53 +484,53 @@ namespace TelevisionPVM
 				switch (pvmState)
 				{
 					case "Off":
-						this.GetComponent<SpriteRenderer>().sprite = ModAPI.LoadSprite(TvSmallOff, TvSmallScale);
+						this.GetComponent<SpriteRenderer>().sprite = TvSmallOff;
 						ScreenLight.Color = Color.clear;
 						break;
 
 					case "On":
-						this.GetComponent<SpriteRenderer>().sprite = ModAPI.LoadSprite(TvSmallOn, TvSmallScale);
+						this.GetComponent<SpriteRenderer>().sprite = TvSmallOn;
 						ScreenLight.Color = new Color(187.0f, 207.0f, 223.0f, 0.5f);
 						break;
 
 					case "Geometry":
-						this.GetComponent<SpriteRenderer>().sprite = ModAPI.LoadSprite(TvSmallGeometry, TvSmallScale);
+						this.GetComponent<SpriteRenderer>().sprite = TvSmallGeometry;
 						ScreenLight.Color = Color.white;
 						break;
 
 					case "ColourBars":
-						this.GetComponent<SpriteRenderer>().sprite = ModAPI.LoadSprite(TvSmallColourBars, TvSmallScale);
+						this.GetComponent<SpriteRenderer>().sprite = TvSmallColourBars;
 						ScreenLight.Color = Color.yellow;
 						break;
 
 					case "Pal":
-						this.GetComponent<SpriteRenderer>().sprite = ModAPI.LoadSprite(TvSmallPal, TvSmallScale);
+						this.GetComponent<SpriteRenderer>().sprite = TvSmallPal;
 						ScreenLight.Color = Color.grey;
 						break;
 
 					case "Broken":
-						this.GetComponent<SpriteRenderer>().sprite = ModAPI.LoadSprite(TvSmallBroken, TvSmallScale);
+						this.GetComponent<SpriteRenderer>().sprite = TvSmallBroken;
 						break;
 
 					case "Shock":
-						this.GetComponent<SpriteRenderer>().sprite = ModAPI.LoadSprite(TvSmallShock, TvSmallScale);
+						this.GetComponent<SpriteRenderer>().sprite = TvSmallShock;
 						break;
 
 					case "Fire":
-						this.GetComponent<SpriteRenderer>().sprite = ModAPI.LoadSprite(TvSmallFire, TvSmallScale);
+						this.GetComponent<SpriteRenderer>().sprite = TvSmallFire;
 						break;
 
 					case "Water":
-						this.GetComponent<SpriteRenderer>().sprite = ModAPI.LoadSprite(TvSmallWater, TvSmallScale);
+						this.GetComponent<SpriteRenderer>().sprite = TvSmallWater;
 						break;
 
 					case "Explode":
-						this.GetComponent<SpriteRenderer>().sprite = ModAPI.LoadSprite(TvSmallExplode, TvSmallScale);
+						this.GetComponent<SpriteRenderer>().sprite = TvSmallExplode;
 						break;
 
 					default:
 						ModAPI.Notify("Sprite not found! Loading default sprite.");
-						this.GetComponent<SpriteRenderer>().sprite = ModAPI.LoadSprite(GetTvSmallOff, TvSmallScale);
+						this.GetComponent<SpriteRenderer>().sprite = TvSmallOff;
 						ScreenLight.Color = Color.grey;
 						break;
 				}
@@ -520,53 +543,53 @@ namespace TelevisionPVM
 				switch (pvmState)
 				{
 					case "Off":
-						this.GetComponent<SpriteRenderer>().sprite = ModAPI.LoadSprite(TvBigOff, TvBigScale);
+						this.GetComponent<SpriteRenderer>().sprite = TvBigOff;
 						ScreenLight.Color = Color.clear;
 						break;
 
 					case "On":
-						this.GetComponent<SpriteRenderer>().sprite = ModAPI.LoadSprite(TvBigOn, TvBigScale);
+						this.GetComponent<SpriteRenderer>().sprite = TvBigOn;
 						ScreenLight.Color = new Color(187.0f, 207.0f, 223.0f, 0.5f);
 						break;
 
 					case "Geometry":
-						this.GetComponent<SpriteRenderer>().sprite = ModAPI.LoadSprite(TvBigGeometry, TvBigScale);
+						this.GetComponent<SpriteRenderer>().sprite = TvBigGeometry;
 						ScreenLight.Color = Color.white;
 						break;
 
 					case "ColourBars":
-						this.GetComponent<SpriteRenderer>().sprite = ModAPI.LoadSprite(TvBigColourBars, TvBigScale);
+						this.GetComponent<SpriteRenderer>().sprite = TvBigColourBars;
 						ScreenLight.Color = Color.yellow;
 						break;
 
 					case "Pal":
-						this.GetComponent<SpriteRenderer>().sprite = ModAPI.LoadSprite(TvBigPal, TvBigScale);
+						this.GetComponent<SpriteRenderer>().sprite = TvBigPal;
 						ScreenLight.Color = Color.grey;
 						break;
 
 					case "Broken":
-						this.GetComponent<SpriteRenderer>().sprite = ModAPI.LoadSprite(TvBigBroken, TvBigScale);
+						this.GetComponent<SpriteRenderer>().sprite = TvBigBroken;
 						break;
 
 					case "Shock":
-						this.GetComponent<SpriteRenderer>().sprite = ModAPI.LoadSprite(TvBigShock, TvBigScale);
+						this.GetComponent<SpriteRenderer>().sprite = TvBigShock;
 						break;
 
 					case "Fire":
-						this.GetComponent<SpriteRenderer>().sprite = ModAPI.LoadSprite(TvBigFire, TvBigScale);
+						this.GetComponent<SpriteRenderer>().sprite = TvBigFire;
 						break;
 
 					case "Water":
-						this.GetComponent<SpriteRenderer>().sprite = ModAPI.LoadSprite(TvBigWater, TvBigScale);
+						this.GetComponent<SpriteRenderer>().sprite = TvBigWater;
 						break;
 
 					case "Explode":
-						this.GetComponent<SpriteRenderer>().sprite = ModAPI.LoadSprite(TvBigExplode, TvBigScale);
+						this.GetComponent<SpriteRenderer>().sprite = TvBigExplode;
 						break;
 
 					default:
 						ModAPI.Notify("Sprite not found! Loading default sprite.");
-						this.GetComponent<SpriteRenderer>().sprite = ModAPI.LoadSprite(GetTvBigOff, TvBigScale);
+						this.GetComponent<SpriteRenderer>().sprite = TvBigOff;
 						ScreenLight.Color = Color.grey;
 						break;
 				}
