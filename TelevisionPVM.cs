@@ -49,10 +49,10 @@ namespace TelevisionPVM
 		private static readonly Sprite PS2On =				ModAPI.LoadSprite("Sprites/PS2/PS2_ON.png", PS2Scale, true);
 		private static readonly Sprite PS2Off =				ModAPI.LoadSprite("Sprites/PS2/PS2_OFF.png", PS2Scale, true);
 		private static readonly Sprite PS2Broken =			ModAPI.LoadSprite("Sprites/PS2/PS2_Destroyed.png", PS2Scale, true);
-		private static readonly Sprite PS2Shock =			ModAPI.LoadSprite("Sprites/PS2/PS2_Destroyed-Shock.png", PVM20Scale, true);
-		private static readonly Sprite PS2Fire =			ModAPI.LoadSprite("Sprites/PS2/PS2_Destroyed-Fire.png", PVM20Scale, true);
-		private static readonly Sprite PS2Water =			ModAPI.LoadSprite("Sprites/PS2/PS2_Destroyed-Water.png", PVM20Scale, true);
-		private static readonly Sprite PS2Explode =			ModAPI.LoadSprite("Sprites/PS2/PS2_Destroyed-Explosion.png", PVM20Scale, true);
+		private static readonly Sprite PS2Shock =			ModAPI.LoadSprite("Sprites/PS2/PS2_Destroyed-Shock.png", PS2Scale, true);
+		private static readonly Sprite PS2Fire =			ModAPI.LoadSprite("Sprites/PS2/PS2_Destroyed-Fire.png", PS2Scale, true);
+		private static readonly Sprite PS2Water =			ModAPI.LoadSprite("Sprites/PS2/PS2_Destroyed-Water.png", PS2Scale, true);
+		private static readonly Sprite PS2Explode =			ModAPI.LoadSprite("Sprites/PS2/PS2_Destroyed-Explosion.png", PS2Scale, true);
 
 		// ********************************
 		// Main

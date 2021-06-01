@@ -2,8 +2,8 @@
   "Name": "CRT Televisions!",
   "Author": "Soiled Panties",
   "Description": "Big chunky CRT televisions, perfect for playing old games on! Handle with caution, extremely heavy!!",
-  "ModVersion": "1.3",
-  "GameVersion": "1.17",
+  "ModVersion": "1.31",
+  "GameVersion": "1.18",
   "ThumbnailPath": "icon.png",
   "EntryPoint": "TelevisionPVM.TelevisionPVM",
   "Tags": [
